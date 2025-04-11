@@ -1,0 +1,136 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ul {
+	list-style-type: none;
+}
+
+:root {
+	font-family: sans-serif;
+}
+
+#app {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	padding: 2rem;
+}
+
+.profileHeader {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	padding: 1rem;
+	border: 2pt solid black;
+}
+
+.profileHeader .cover {
+	display: flex;
+	gap: 1rem;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.profileHeader .cover .img {
+	position: relative;
+	z-index: 1;
+}
+
+.profileHeader .cover .img::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+}
+
+.profileHeader .cover img {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+}
+
+.profileHeader .cover .change {
+	font-size: 0.5rem;
+	opacity: 0;
+	padding: 0.25rem;
+	border: none;
+	position: absolute;
+	background: rgba(0, 0, 0, 0.75);
+	color: white;
+	border-radius: 0.25rem;
+	z-index: 99;
+	cursor: pointer;
+	transition: opacity 500ms;
+}
+
+.profileHeader .cover .change svg {
+	width: 1rem;
+	height: 1rem;
+	fill: currentColor;
+}
+
+.profileHeader .cover:hover .change {
+	opacity: 1;
+}
+
+.profileHeader .stats {
+	display: flex;
+}
+
+/*TODO: Buttun coverni qolplashi kerak*/
+.profileHeader .stats button {
+	font-family: monospace;
+	border: none;
+	background: transparent;
+	display: flex;
+	gap: 0.5rem;
+	padding: 0.5rem;
+	border-radius: 0.25rem;
+	min-width: 100px;
+	flex-direction: column;
+	flex: 1;
+	cursor: pointer;
+}
+
+.profileHeader .stats button:hover {
+	background: #f0f0f0;
+}
+
+.profileHeader .stats button .count {
+	font-weight: bold;
+}
+
+.posts img {
+	width: 100px;
+	height: 100px;
+}
+
+.posts {
+	width: 100%;
+}
+
+.posts .post-items {
+	width: 100%;
+	background: red;
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.posts .post-items li {
+	width: calc((100% - 2rem) / 3);
+	border: 2pt solid black;
+}
