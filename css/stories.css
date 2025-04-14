@@ -1,0 +1,60 @@
+
+.stories {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding: 0.5rem 0;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.story-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    flex-shrink: 0;
+    width: 60px;
+}
+
+.story-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid transparent;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    padding: 2px;
+}
+
+.story-item span {
+    font-size: 0.7rem;
+    color: #333;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 60px;
+}
+
+.story-item.new-story {
+    position: relative;
+}
+
+.story-item.new-story .plus-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #333;
+    border: 2px solid #ddd;
+}
+
+.story-item.new-story span {
+    font-size: 0.7rem;
+    color: #333;
+}

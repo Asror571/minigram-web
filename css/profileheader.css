@@ -1,0 +1,159 @@
+.profileHeader {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.headerTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 6rem;
+}
+
+.Userinfo {
+    text-align: left;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.Userinfo h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.Userinfo p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+}
+
+.profileHeader .cover {
+    position: relative;
+    flex-shrink: 0;
+    width: 100px;
+}
+
+.profileHeader .cover .img {
+    position: relative;
+    z-index: 1;
+}
+
+.profileHeader .cover .img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border-radius: 50%;
+    z-index: 2;
+    transition: background 300ms ease;
+
+
+}
+
+.profileHeader .cover:hover .img::before {
+    background: rgba(0, 0, 0, 0.5);
+    
+}
+
+.profileHeader .cover img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    position: relative;
+    z-index: 1;
+    
+}
+
+.profileHeader .cover .change {
+    font-size: 0.5rem;
+    opacity: 0;
+    padding: 0.5rem;
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    border-radius: 0.25rem;
+    z-index: 3;
+    cursor: pointer;
+    transition: opacity 300ms ease;
+}
+
+.profileHeader .cover .change svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: currentColor;
+}
+
+.profileHeader .cover:hover .change {
+    opacity: 1;
+}
+
+.profileHeader .stats {
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-start;
+    flex: 1;
+    align-items: center;
+}
+
+.profileHeader .stats button {
+    font-family: sans-serif;
+    border: none;
+    background: transparent;
+    display: flex;
+    gap: 0.25rem;
+    padding: 0;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.profileHeader .stats button:hover .count,
+.profileHeader .stats button:hover span:not(.count) {
+    color: #0095f6;
+}
+
+.profileHeader .stats button:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #0095f6;
+    transition: background 0.3s ease;
+}
+
+.profileHeader .stats button .count {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.profileHeader .stats button span:not(.count) {
+    font-size: 0.9rem;
+    color: #666;
+    transition: color 0.3s ease;
+}

@@ -1,0 +1,64 @@
+.posts {
+    width: 100%;
+    max-width: 800px;
+}
+
+.posts .post-items {
+    width: 100%;
+    background: transparent;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.posts .post-items li {
+    width: calc((100% - 2rem) / 3);
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.posts .post-items li:hover {
+    transform: translateY(-5px);
+}
+
+.posts img {
+    width: 100%;
+    height: 200px;
+    display: block;
+    object-fit: cover;
+}
+
+.posts .post-items li ul {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    transition: background 0.3s ease; 
+}
+
+
+.posts .post-items li ul li {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.posts .post-items li ul li svg {
+    width: 20px;
+    height: 20px;
+    stroke: #110808;
+    stroke-width: 2;
+    fill: none;
+}
+
+.posts .post-items li ul li span {
+    color: #230707;
+    font-size: 0.9rem;
+}
